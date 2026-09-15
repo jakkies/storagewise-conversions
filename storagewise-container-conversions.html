@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Container Conversions Pretoria & Nationwide | Storage WISE</title>
+<meta name="description" content="Site offices, ablution blocks, guard houses, workshops and shops built from shipping containers. Wired, certified and delivered anywhere in South Africa. Get a free quote.">
+
+<!-- ============================================================
+  GOOGLE ADS CONVERSION TRACKING — placeholder
+  Replace AW-CONVERSION_ID / AW-CONVERSION_ID/LABEL with your real
+  Google Ads tag before publishing. See the "quoteForm" submit
+  handler near the bottom of this file for the fireConversion() call.
+============================================================= -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-CONVERSION_ID');
+</script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#10202B;
+    --ink-2:#16283A;
+    --steel:#4E6B80;
+    --steel-line:#7A94A6;
+    --panel:#E8ECF4;
+    --panel-2:#D5DEE2;
+    --brand:#FFD000;
+    --brand-dark:#163F5E;
+    --error:#B3261E;
+    --line-dark:#22323F;
+    --accent:#8FC1E0;
+    --cream:#EFF3F7;
+    --ok:#3C7A4E;
+    --font-display:'Archivo', sans-serif;
+    --font-body:'IBM Plex Sans', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--cream);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{
+    font-family:var(--font-display);
+    font-weight:900;
+    line-height:1.05;
+    letter-spacing:-0.01em;
+    margin:0 0 0.5em;
+    color:var(--cream);
+  }
+  p{margin:0 0 1em; color:var(--cream); opacity:0.92;}
+  .container{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .dark p{color:var(--cream);}
+  .on-panel h1,.on-panel h2,.on-panel h3,.on-panel p,.on-panel li,.on-panel label,.on-panel span{color:var(--ink);}
+  .on-panel{background:var(--panel); color:var(--ink);}
+
+  .steel-texture{
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 18px);
+  }
+
+  .mono{font-family:var(--font-mono); letter-spacing:0.01em;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:var(--font-body); font-weight:700; font-size:16px;
+    padding:14px 26px; border-radius:var(--radius); border:2px solid transparent;
+    cursor:pointer; text-decoration:none; transition:transform .12s ease, background .15s ease;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn-primary{background:var(--brand); color:var(--ink);}
+  .btn-primary:hover{background:#E6B800; color:var(--ink);}
+  .btn-outline{background:transparent; color:var(--cream); border-color:var(--steel-line);}
+  .btn-outline:hover{border-color:var(--accent); color:var(--accent);}
+  .btn-outline-dark{background:transparent; color:var(--ink); border-color:var(--ink);}
+  .btn-outline-dark:hover{background:var(--ink); color:var(--cream);}
+  .btn-block{width:100%;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.97); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--panel-2);
+    box-shadow:0 1px 0 rgba(16,32,43,0.04);
+  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+  .logo-img{height:54.74px; width:auto; display:block; padding-left:25px;}
+  .nav-actions{display:flex; align-items:center; gap:18px;}
+  .tel-link{display:none; font-weight:600; font-size:15px; white-space:nowrap; color:var(--ink);}
+  @media(min-width:720px){ .tel-link{display:inline-flex; align-items:center; gap:8px;} }
+
+  /* ---------- hero ---------- */
+  .hero{padding:56px 0 64px; position:relative; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns:1fr; gap:40px; align-items:center;}
+  @media(min-width:900px){ .hero-grid{grid-template-columns:1.05fr 0.95fr; gap:40px;} }
+  .hero h1{font-size:clamp(32px,5vw,54px); max-width:14ch;}
+  .hero-sub{font-size:18px; max-width:46ch; margin-bottom:28px;}
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:32px;}
+  .trust-strip{display:flex; flex-wrap:wrap; gap:0; border-top:1px solid var(--line-dark);}
+  .trust-item{
+    flex:1 1 150px; padding:14px 16px 0 0; font-size:13px; color:var(--accent);
+    font-family:var(--font-mono); text-transform:none;
+  }
+  .trust-item strong{display:block; color:var(--cream); font-family:var(--font-body); font-size:15px; font-weight:600;}
+
+  .hero-art{position:relative;}
+  .hero-art svg{width:100%; height:auto;}
+  .dim-line{stroke:var(--accent); stroke-width:2; fill:none; stroke-dasharray:600; stroke-dashoffset:600; animation:draw 1.4s ease forwards .3s;}
+  .dim-tick{stroke:var(--accent); stroke-width:2;}
+  .container-body{fill:var(--steel);}
+  .container-corr{stroke:#3E4E5C; stroke-width:2;}
+  .container-door{fill:var(--ink-2); stroke:var(--steel-line); stroke-width:2;}
+  .container-window{fill:#7A94A6; stroke:var(--ink-2); stroke-width:3;}
+  .container-bar{stroke:var(--ink-2); stroke-width:2;}
+  .badge-coc{fill:var(--brand);}
+  .hero-fade{opacity:0; animation:fadein .8s ease forwards .1s;}
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  @keyframes fadein{ to{ opacity:1; } }
+
+  /* ---------- section basics ---------- */
+  section{padding:64px 0;}
+  .section-head{max-width:640px; margin-bottom:36px;}
+  .section-head p{font-size:17px;}
+  .eyebrow-note{font-family:var(--font-mono); font-size:13px; color:var(--brand); display:block; margin-bottom:10px;}
+  .on-panel .eyebrow-note{color:var(--brand-dark);}
+
+  /* ---------- conversion type cards ---------- */
+  .type-grid{display:grid; grid-template-columns:1fr; gap:2px; background:var(--panel-2);}
+  @media(min-width:620px){ .type-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(min-width:900px){ .type-grid{grid-template-columns:repeat(3,1fr);} }
+  .type-card{
+    background:var(--panel); padding:26px 24px 24px; position:relative;
+    border-top:4px solid var(--brand);
+  }
+  .type-card .type-icon{width:34px; height:34px; margin-bottom:16px;}
+  .type-card h3{font-size:19px; margin-bottom:8px; color:var(--ink);}
+  .type-card p{font-size:15px; margin-bottom:0; color:var(--ink);}
+
+  /* ---------- spec / included ---------- */
+  .spec-wrap{display:grid; grid-template-columns:1fr; gap:36px;}
+  @media(min-width:860px){ .spec-wrap{grid-template-columns:0.85fr 1.15fr;} }
+  .spec-list{list-style:none; margin:0; padding:0; display:grid; gap:0;}
+  .spec-list li{
+    display:flex; gap:14px; align-items:flex-start;
+    padding:14px 0; border-bottom:1px solid #d8d0b4;
+    font-size:15.5px;
+  }
+  .spec-list li:last-child{border-bottom:none;}
+  .spec-num{font-family:var(--font-mono); color:var(--brand-dark); font-weight:600; font-size:13px; min-width:26px; padding-top:2px;}
+
+  /* ---------- process ---------- */
+  .process-strip{display:grid; grid-template-columns:1fr; gap:0;}
+  @media(min-width:800px){ .process-strip{grid-template-columns:repeat(4,1fr);} }
+  .process-step{
+    padding:26px 22px; border-left:3px solid var(--brand);
+    border-top:1px solid var(--line-dark);
+  }
+  @media(min-width:800px){
+    .process-step{border-top:none;}
+    .process-step + .process-step{border-left:1px solid var(--line-dark); }
+    .process-step:first-child{border-left:3px solid var(--brand);}
+  }
+  .process-num{font-family:var(--font-mono); font-size:14px; color:var(--accent); display:block; margin-bottom:10px;}
+  .process-step h3{font-size:18px; margin-bottom:8px;}
+  .process-step p{font-size:14.5px;}
+
+  /* ---------- recent work ---------- */
+  .work-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px;}
+  .work-card{background:var(--ink-2); border:1px solid var(--line-dark);}
+  .work-thumb{aspect-ratio:4/3; position:relative;}
+  .work-thumb svg{width:100%; height:100%;}
+  .work-body{padding:18px 20px 22px;}
+  .work-tag{font-family:var(--font-mono); font-size:12px; color:var(--accent); display:block; margin-bottom:8px;}
+  .work-body h3{font-size:16.5px; margin-bottom:6px;}
+  .work-body p{font-size:14px; margin-bottom:0;}
+  .work-note{font-size:13px; opacity:0.65; margin-top:22px;}
+
+  /* ---------- faq ---------- */
+  .faq-item{border-bottom:1px solid #d8d0b4; padding:6px 0;}
+  .faq-item summary{
+    cursor:pointer; list-style:none; font-weight:700; font-size:16.5px;
+    padding:16px 34px 16px 0; position:relative;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+"; position:absolute; right:4px; top:14px; font-size:22px; color:var(--brand-dark); font-weight:400;
+  }
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item .faq-a{padding:0 0 20px; font-size:15px; max-width:70ch;}
+
+  /* ---------- quote / lead form ---------- */
+  .quote-section{background:var(--panel); color:var(--ink);}
+  .quote-wrap{display:grid; grid-template-columns:1fr; gap:40px;}
+  @media(min-width:900px){ .quote-wrap{grid-template-columns:0.9fr 1.1fr;} }
+  .quote-copy h2{font-size:clamp(26px,3.4vw,36px); color:var(--ink);}
+  .quote-copy p{font-size:16px; color:var(--ink);}
+  .quote-perks{list-style:none; margin:24px 0 0; padding:0; font-size:15px;}
+  .quote-perks li{padding:8px 0 8px 26px; position:relative;}
+  .quote-perks li::before{content:"—"; position:absolute; left:0; color:var(--brand-dark); font-weight:700;}
+
+  .form-card{background:var(--cream); border:1px solid #d8d0b4; padding:28px;}
+  .form-row{display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:16px;}
+  @media(min-width:560px){ .form-row.two{grid-template-columns:1fr 1fr;} }
+  label{display:block; font-size:13px; font-weight:600; margin-bottom:6px; font-family:var(--font-mono); color:var(--steel);}
+  input, select, textarea{
+    width:100%; font-family:var(--font-body); font-size:15px; padding:12px 12px;
+    border:1.5px solid #c9c2a8; background:#fff; color:var(--ink);
+    border-radius:var(--radius);
+  }
+  input:focus, select:focus, textarea:focus{outline:2px solid var(--brand); outline-offset:1px; border-color:var(--brand);}
+  textarea{resize:vertical; min-height:88px;}
+  .form-consent{font-size:12.5px; opacity:0.75; margin:14px 0 18px;}
+  .field-error{color:var(--error); font-size:12.5px; margin-top:5px; display:none;}
+  .invalid{border-color:var(--error) !important;}
+  .invalid + .field-error{display:block;}
+  #successPanel{display:none; text-align:center; padding:30px 10px;}
+  #successPanel h3{font-size:22px; color:var(--ink);}
+  #successPanel p{color:var(--ink);}
+  #successPanel .ok-mark{
+    width:52px; height:52px; border-radius:50%; background:var(--ok); color:#fff;
+    display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:26px;
+  }
+
+  /* ---------- footer ---------- */
+  footer{padding:48px 0 100px; border-top:1px solid var(--line-dark);}
+  .foot-grid{display:grid; grid-template-columns:1fr; gap:26px;}
+  @media(min-width:700px){ .foot-grid{grid-template-columns:1.2fr 1fr 1fr;} }
+  .foot-grid h4{font-family:var(--font-mono); font-size:13px; color:var(--accent); margin:0 0 12px; font-weight:600;}
+  .foot-grid p, .foot-grid a{font-size:14.5px;}
+  .foot-links{list-style:none; margin:0; padding:0;}
+  .foot-links li{margin-bottom:8px;}
+  .foot-links a{text-decoration:none; opacity:0.85;}
+  .foot-links a:hover{opacity:1; color:var(--accent);}
+  .foot-bottom{margin-top:38px; padding-top:20px; border-top:1px solid var(--line-dark); font-size:12.5px; opacity:0.6;}
+
+  /* ---------- sticky mobile bar ---------- */
+  .mobile-bar{
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    display:grid; grid-template-columns:1fr 1fr; gap:1px;
+    background:var(--line-dark);
+  }
+  .mobile-bar a{padding:15px 10px; text-align:center; font-weight:700; font-size:14.5px; text-decoration:none;}
+  .mobile-bar .call{background:var(--ink-2); color:var(--cream);}
+  .mobile-bar .quote{background:var(--brand); color:var(--ink);}
+  @media(min-width:760px){ .mobile-bar{display:none;} }
+  body{padding-bottom:56px;}
+  @media(min-width:760px){ body{padding-bottom:0;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-row">
+    <img class="logo-img" src="data:image/webp;base64,UklGRkAjAABXRUJQVlA4WAoAAAAwAAAACAEATwAASUNDUEgMAAAAAAxITGlubwIQAABtbnRyUkdCIFhZWiAHzgACAAkABgAxAABhY3NwTVNGVAAAAABJRUMgc1JHQgAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLUhQICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFjcHJ0AAABUAAAADNkZXNjAAABhAAAAGx3dHB0AAAB8AAAABRia3B0AAACBAAAABRyWFlaAAACGAAAABRnWFlaAAACLAAAABRiWFlaAAACQAAAABRkbW5kAAACVAAAAHBkbWRkAAACxAAAAIh2dWVkAAADTAAAAIZ2aWV3AAAD1AAAACRsdW1pAAAD+AAAABRtZWFzAAAEDAAAACR0ZWNoAAAEMAAAAAxyVFJDAAAEPAAACAxnVFJDAAAEPAAACAxiVFJDAAAEPAAACAx0ZXh0AAAAAENvcHlyaWdodCAoYykgMTk5OCBIZXdsZXR0LVBhY2thcmQgQ29tcGFueQAAZGVzYwAAAAAAAAASc1JHQiBJRUM2MTk2Ni0yLjEAAAAAAAAAAAAAABJzUkdCIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFlaIAAAAAAAAPNRAAEAAAABFsxYWVogAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z2Rlc2MAAAAAAAAAFklFQyBodHRwOi8vd3d3LmllYy5jaAAAAAAAAAAAAAAAFklFQyBodHRwOi8vd3d3LmllYy5jaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkZXNjAAAAAAAAAC5JRUMgNjE5NjYtMi4xIERlZmF1bHQgUkdCIGNvbG91ciBzcGFjZSAtIHNSR0IAAAAAAAAAAAAAAC5JRUMgNjE5NjYtMi4xIERlZmF1bHQgUkdCIGNvbG91ciBzcGFjZSAtIHNSR0IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZGVzYwAAAAAAAAAsUmVmZXJlbmNlIFZpZXdpbmcgQ29uZGl0aW9uIGluIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAALFJlZmVyZW5jZSBWaWV3aW5nIENvbmRpdGlvbiBpbiBJRUM2MTk2Ni0yLjEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHZpZXcAAAAAABOk/gAUXy4AEM8UAAPtzAAEEwsAA1yeAAAAAVhZWiAAAAAAAEwJVgBQAAAAVx/nbWVhcwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAo8AAAACc2lnIAAAAABDUlQgY3VydgAAAAAAAAQAAAAABQAKAA8AFAAZAB4AIwAoAC0AMgA3ADsAQABFAEoATwBUAFkAXgBjAGgAbQByAHcAfACBAIYAiwCQAJUAmgCfAKQAqQCuALIAtwC8AMEAxgDLANAA1QDbAOAA5QDrAPAA9gD7AQEBBwENARMBGQEfASUBKwEyATgBPgFFAUwBUgFZAWABZwFuAXUBfAGDAYsBkgGaAaEBqQGxAbkBwQHJAdEB2QHhAekB8gH6AgMCDAIUAh0CJgIvAjgCQQJLAlQCXQJnAnECegKEAo4CmAKiAqwCtgLBAssC1QLgAusC9QMAAwsDFgMhAy0DOANDA08DWgNmA3IDfgOKA5YDogOuA7oDxwPTA+AD7AP5BAYEEwQgBC0EOwRIBFUEYwRxBH4EjASaBKgEtgTEBNME4QTwBP4FDQUcBSsFOgVJBVgFZwV3BYYFlgWmBbUFxQXVBeUF9gYGBhYGJwY3BkgGWQZqBnsGjAadBq8GwAbRBuMG9QcHBxkHKwc9B08HYQd0B4YHmQesB78H0gflB/gICwgfCDIIRghaCG4IggiWCKoIvgjSCOcI+wkQCSUJOglPCWQJeQmPCaQJugnPCeUJ+woRCicKPQpUCmoKgQqYCq4KxQrcCvMLCwsiCzkLUQtpC4ALmAuwC8gL4Qv5DBIMKgxDDFwMdQyODKcMwAzZDPMNDQ0mDUANWg10DY4NqQ3DDd4N+A4TDi4OSQ5kDn8Omw62DtIO7g8JDyUPQQ9eD3oPlg+zD88P7BAJECYQQxBhEH4QmxC5ENcQ9RETETERTxFtEYwRqhHJEegSBxImEkUSZBKEEqMSwxLjEwMTIxNDE2MTgxOkE8UT5RQGFCcUSRRqFIsUrRTOFPAVEhU0FVYVeBWbFb0V4BYDFiYWSRZsFo8WshbWFvoXHRdBF2UXiReuF9IX9xgbGEAYZRiKGK8Y1Rj6GSAZRRlrGZEZtxndGgQaKhpRGncanhrFGuwbFBs7G2MbihuyG9ocAhwqHFIcexyjHMwc9R0eHUcdcB2ZHcMd7B4WHkAeah6UHr4e6R8THz4faR+UH78f6iAVIEEgbCCYIMQg8CEcIUghdSGhIc4h+yInIlUigiKvIt0jCiM4I2YjlCPCI/AkHyRNJHwkqyTaJQklOCVoJZclxyX3JicmVyaHJrcm6CcYJ0kneierJ9woDSg/KHEooijUKQYpOClrKZ0p0CoCKjUqaCqbKs8rAis2K2krnSvRLAUsOSxuLKIs1y0MLUEtdi2rLeEuFi5MLoIuty7uLyQvWi+RL8cv/jA1MGwwpDDbMRIxSjGCMbox8jIqMmMymzLUMw0zRjN/M7gz8TQrNGU0njTYNRM1TTWHNcI1/TY3NnI2rjbpNyQ3YDecN9c4FDhQOIw4yDkFOUI5fzm8Ofk6Njp0OrI67zstO2s7qjvoPCc8ZTykPOM9Ij1hPaE94D4gPmA+oD7gPyE/YT+iP+JAI0BkQKZA50EpQWpBrEHuQjBCckK1QvdDOkN9Q8BEA0RHRIpEzkUSRVVFmkXeRiJGZ0arRvBHNUd7R8BIBUhLSJFI10kdSWNJqUnwSjdKfUrESwxLU0uaS+JMKkxyTLpNAk1KTZNN3E4lTm5Ot08AT0lPk0/dUCdQcVC7UQZRUFGbUeZSMVJ8UsdTE1NfU6pT9lRCVI9U21UoVXVVwlYPVlxWqVb3V0RXklfgWC9YfVjLWRpZaVm4WgdaVlqmWvVbRVuVW+VcNVyGXNZdJ114XcleGl5sXr1fD19hX7NgBWBXYKpg/GFPYaJh9WJJYpxi8GNDY5dj62RAZJRk6WU9ZZJl52Y9ZpJm6Gc9Z5Nn6Wg/aJZo7GlDaZpp8WpIap9q92tPa6dr/2xXbK9tCG1gbbluEm5rbsRvHm94b9FwK3CGcOBxOnGVcfByS3KmcwFzXXO4dBR0cHTMdSh1hXXhdj52m3b4d1Z3s3gReG54zHkqeYl553pGeqV7BHtje8J8IXyBfOF9QX2hfgF+Yn7CfyN/hH/lgEeAqIEKgWuBzYIwgpKC9INXg7qEHYSAhOOFR4Wrhg6GcobXhzuHn4gEiGmIzokziZmJ/opkisqLMIuWi/yMY4zKjTGNmI3/jmaOzo82j56QBpBukNaRP5GokhGSepLjk02TtpQglIqU9JVflcmWNJaflwqXdZfgmEyYuJkkmZCZ/JpomtWbQpuvnByciZz3nWSd0p5Anq6fHZ+Ln/qgaaDYoUehtqImopajBqN2o+akVqTHpTilqaYapoum/adup+CoUqjEqTepqaocqo+rAqt1q+msXKzQrUStuK4trqGvFq+LsACwdbDqsWCx1rJLssKzOLOutCW0nLUTtYq2AbZ5tvC3aLfguFm40blKucK6O7q1uy67p7whvJu9Fb2Pvgq+hL7/v3q/9cBwwOzBZ8Hjwl/C28NYw9TEUcTOxUvFyMZGxsPHQce/yD3IvMk6ybnKOMq3yzbLtsw1zLXNNc21zjbOts83z7jQOdC60TzRvtI/0sHTRNPG1EnUy9VO1dHWVdbY11zX4Nhk2OjZbNnx2nba+9uA3AXcit0Q3ZbeHN6i3ynfr+A24L3hROHM4lPi2+Nj4+vkc+T85YTmDeaW5x/nqegy6LzpRunQ6lvq5etw6/vshu0R7ZzuKO6070DvzPBY8OXxcvH/8ozzGfOn9DT0wvVQ9d72bfb794r4Gfio+Tj5x/pX+uf7d/wH/Jj9Kf26/kv+3P9t//9WUDhMexYAAC8IwRMQVeG5/n/Z3DilmWnGKMYRjcZirUZaMTNL4xGzFsS48ojRbI9ktoVmtpg1MkrPs2crZgoz0/3//f/3fT/PbYWZuWaGipmz9AJ4twwzJ2+AF7owMzOn3GwVZmaqpwqXDBXzL5x0Oak46tSHsUyVk56zvGUYdVIxM6fUcWVXm85dGLp/59KVtwspsw4zc9rFyunoBbjK2c6qwkm30AXL6cPMzMzMzFBxfluFmROdlFgxSRsmQ6c6zMwMlavw4hsIGKowMzOXdq0+zFks+RwHkmQrzb4P/P+RCG5RLEDuf723Em5tO6bquX5Vtm3bdh3btm3btn2yazzTKNdYIJAojLi/RBQl26rbSr3vvCQrwRpFRgfIB/SgMGJ6UN6LvdiLHpSwzZs9UBiWogmFwTIowXPpNxvtU6NNmvztXsze7g6EweJLwRt3ymf6e2mTZtE9uazV38eIrxZpiisipF8E9T2C+U7RszdytwdNuSUTqDUXytfto5qq3zK8aU9/FZ8rpCpuCpd+Z+96PUqk7KMs1RljfiuJ1N0ScG0r3O1UdlxjUbcjhLqhn0vBFqmaeMm05OawGJfXQsT/BHb92ifL76r0XG6aI4BImXEtlbfZYg81AzXSq5mPUA1heqJH0vs9bnsIzlpQNdmqUzilhvVsjRVyCeQG/C5v1E8tFKQn9QiT/DL8s40arpkzidX7xYuYfYJcBjJmwzyXELBzw1CcKddkM0zlHqs9Cwriz45qtEfTK3t9EorSO+xG/1QTECdq9s5URxChiZYsCD2ZUO0tycCBCYpSctjAIHYLwhjq/+L0ARsUxjH9pvXfmz6LojgDGovv0wbnFSrabcdJdr9LaGYU6o0Ok6+prG7nIJqLGMFOyeL1nJJR0WOlhLFWQWc0pXHaWQjrS1dcgsydLqk5IkN5wSCBEWhAV31mBgaQKcHj/4L6Hr3BATQgV3OIUC902f/93/9+ZRaCuL6aiMS8vMLxHSmIVHk3QKZHFQHskJn7kxmgAcnzO6xpZRD1jVulyCyD10mVjMh4+6JEf0iNqVLLIwS5DPuMPdWack1Tftwh/fW7VIlSUTehnjjtPIR1+bVjmJT5LUTUOZAdwISM/wI6d2RxKq5jomVvgSY0O8KBmwoy657+9EV0NoP7Lsz+C3kJ9IjIs2tfsoA5JA17EM9GINHtIeZAzolo6iPQITGPO4/QUvptOnKZR7fliZjcOJR0Jmm9Rsp0WLb8rXLjTnFvH4TLOhERZasvSXp/ZvcQEf1Q+XGn9NcfUsUqRZ3RoWzbajzXxUy6pCMiGm/Ow/i2CpshQW6FiX97ggTZCDNoMGGjRETjTXnA5eR2hFBDtGlm+6JPJVQsxgz1XEbgIhmXYTMioqZ7hF7phIhYYyom1NUSX2g3IZYuYrzA5gyTe51wzsA5/2To5wYp8qd8RhZE5Jh28u/00t9fiOkH2YfTbOHWH1yC+nHvWW2qRlwmW7OU7XdLc/0ldaw0pDNqaFx2UWAV7shcBmhDpOwjx/Sbgu1uyq1Cj7UwCxFIX1iAiDjJkkFMdK3eHW/IfgvmTJhfFfgPpi1oQnD/H1N82MSCdgNiqSKqhfPyOgOnRCVZ2i9m2qVIf1DtLVXlTzuMd3un/LhB+KyT92hK9KRbkMjCBi79ifAORAfSAoWA4QFzcR295wRLITJ9ajUKzEq6Xq2aQ0zfSqYjENxVtt8j7fW31LGKizVpaNxOw+JanT7A0dnrk4iPPpmrs8BPL9SOOV51051+gJPjxbk+h4jP4t6PzFE8sULYsqZ7BCDe9SnmEi0oh7PKW183yrtVw18cqvJug3Gv76UvrwvthvRvRN8Q/cHNr7j5BzICSwFGEmQDcgNmQkoJjU9gc0K60iN9YNH4/ohpXM+0ZjD9vRGR58RrrlL9AUNc/kqdqH1CU3HbZQjLbg7i+oAzkqM+YR6L+FVwTQn9oLqTA5rskXiLKe6a2rNDm+9hVK58d/ih/oNKOlpQdm8Q6/JZ1Oy7SNkPAazOwMbBNhCLC+YlF5dcgG+DbII4QBkgDSClVExLTEQMTwybfQLUIhQlFTgaIScgIsKluu9mrk4xvZuZ9ghgV6n+oDSXv5xitVLW5EO/wHI+A0GOeJR3HWNYQn0MuO8SZ9I1HbxyLwARcXuqRLGkwE7JqbgrbzhjaOD9HQRSSntBUSAGUAZIKaiqKKvIQQQGfAEDE4gYMjBiTJ8a1QnOuATmV0jpQ1HUWJlvT5n6nab5VjCdvog8N1+iO8zp8t9/l7UmLYzHrkLoIfzPO0WYCNkX48+5rO+ZH74XuoA3oLJnNjpyJn15kWXYyKR2IJ21yuN1gsVjyBzqydZEQEEVorBiCMJOsOPIxGH5BhCxN+BIkWeaC/DGUzC9KBIopAyoqAkHc9yp1vWpuv0Opi0BUevT2+ZLdEc4Z/8NEWuUtRZu4nG+FujRPvOD8T371MUNbkcIa1pXt27dEGblgj2wV9/yCHblikexAFHctSro9D699pYkIm0+6uj6ESCiH0FxQE3B7jhFTYWiEqGorWD6USjsiC4yG3HmsqGxyhIpmNoj7sh0BKPtjj8XGbI9IdWlm1OsUcFZTC0euw6h9xnn9c/qyhHGW6h1OtaikgS3x0i8Z7DAgIgCuQGso/exaupt8X6Vy/Ys6Nrsvco4cwFEBMoAaz8sv4BQvvYUhYdiGEKLubYoZSgVVSM18/2uidpjWi85TH8frU4f483F3i9V1mM4a6X78f9y+e523zKv6lTG+q7cOb9q2tOfyp7Y1xcUbwPaqGYfBU9PVmFnYBneFcCkhOLFVi6diPc3mzlFrIK5OqP2uF7zPUJBZ2CBOkhXn5EK99xyNlZX4bESkcqeIt0OivKPVUDPwCJCJX98AMhLauYQK/ACCDSpRqjzogA8eIfqpJDZ4DDpkuXaLFEQev3rfClwPl7bai6+a9drVX3U+wDmdBQPCp6itLPgYcW9gYCdQJOqhDYpFNAIhOL9NyjvbbI1k7Mz2gkKi1TGVntaTJ9YNM0ZwIqHDfdsx/RMtwcVaIfi9AGbeVRMsaaInH3wUi91TJZW1ho5eAWeP4EiIAEdXf8Kr4o4xkKPDUJdOFOs6fw7A6wF6LMgvJ2sCUEvVQ/n4iq9FjwPRMSs1Wm8jiiI8A09s/Du8wGWdqYBnc4+KqfbVhBSEZGIQyh/KweEBYYlutQiMgD7fu5SynHhokkMhbqWhCIdnCZdsvmKLHBMCu1muoN1z9wHbF5deFIrPlbQowOT5H6f6JMIa85F1PovOevjGBszaTOcEsNGqnK1hxAIeLhs+IthJUG82gTvJlLKv5NS+hfsnmGAyICUMjfwsxKabM3CG5lQZFcoIivUSYUTnMZbimmgWqlYXPoD5N+OYP5dI9EzbYT0C1gyvTum9pZETYNfrNtARHwPfo+QsH/Xv0xjak5FYFnF4j5ignej2sR5TaawF6x61av+xkrA2rfhSFzyJV9yIiCuoCSx0Y2WUBSQefQzdbdkTH1CsXLF4Wty5pCvyEyPRwMnZ+R3PeZBe6IHuLr0GPVdC1QG74R5HnC7WVC1a39ITFDfQ7xn3bcCwkpFPwvqBnTPTLryEmaiOUtP6mFpw1qTj5h8TcVt9iXYRiRgG0EAwUtCGgugC86lVxaF/LWteg8n6bGZY2J+doRnK6I6WyIH3w0Va96oHh/7yoiIdz3iq0W9X7yrKdZv1Q1eW6qOHMFlJtrTjmA6IfLv9laYZ7mVCedsl/Fo54Hq9kdQrNfGNbII6HU6CoQBtmEvsLhGxOHLX6v6qeElnKEHlRrXQ5DzOGLYrc1UnUN60MGiSoZ9dlDnuTpRl/aJxI2ehSnY7QZMsaa4DY3l6P1XK9Zr4xrNsHMGYoEATYYjFA0I5hq0mEsx1lRHH1oIhfEearTYQ+lzGWsWu2JPdbQWUAhuvEcR7LlbzljfCkz0yxsEclZWFMhriQUkVI1NKLoo3p+Zg7lQYACF0NhTLS/hFH0+dssiFznZmob0ofm3LxLU9XAnFaDq98qCGs/xicdRpjkDsGqgrbGCFox3e0rgrEInv1lYYK/B9A0cKaINkFnQPZ/ADyAQPjCi7PU1n0mmNcVBaOABzAEPYxLCZcxPPRtjow9R6XEdP3Yc96qj/ljSi9aZIr+tTyyC2uVpD9gMaUEfANq/INFMqPARqRGf2xVVFIlme2Lg4t+DPsOyxoimOMSjxnotkYfIrEhJ2AqCEIMr/BADCXZPbuAEmT4IJnJgQNnqGz6TTFuyr9cpBcEkoJPreyndiNqWHdco0O6x6edpS6rZkruSlyS1PMDY33Ilhw0evlC3S9nHGnN6EvHmYc3rzN3z3Vk2yjVmboGXZM2YR9RrqvRcrmi33Vq6PgDRgu7uW4Lc9hDu4mxJmxrhrBBJv/LdQVLKEAIpZWDBNrqXFIQAqhGuRHkiHHE4GRRJiRhEOEXywAwYndCO/4/cCoWN2OAV7L4w+FwzsAkR9yszbmajCKyIovBikEdRUXEQB1UZ6O4KhAOklD+bDZBSyuqwsZRTlEng8qL9GBcclWL3B2GTLtfBv6SKoPt9BwcyKooSIxBpBOkFejkrIN8KZkLiFGVqOg39WucxcOW7z/ArUAQGwEv6UvhRbD0pkddM02GD0ByMxynKjHCq+Nho9wsTBos2XGzYTfEYvRKI/gQC4CUWkVrB3NtX9E7sPmGKwGnDxfq9uJPuU3Df3ScH7lKs6R6Fbn4UQpu0Ct4GmTRwKDnudKS7T6gtImzSzaU5riXhMWNAYvFACIWNwofgvoMB0p9AIHJgQm/RYg9HN1+Z0ObwoXEI+UvSY3XykQt1R+2+IVzayaU5QUr5jxuS8nnv2x6Q3xhMYaPgRDZmWrylGg+2uaRCZoHDZ/VGWFWHX/3VXz1wyNO5uOpXlcwNXafShHUwsBB+ViJXlLfdL3L2wREvdk0h4n8ylee0Ffaaf1WcE7Oewt1+gyi2nkbxyrmB65ULDG2wgPRvIKUbkUkQk8hJnPnRfyNUhVAchKI1wbyYRtnhUKA/7v+sCswvOhvRoDqO8a0Ca6udEDGgHQTsIyJiN57nBTw6wqwr0e2h7+O5ozjtrKWhiFnyt4fBH0MvxEzDAgEBGcBASlkUAP2XMWAHjEkoPBRSsy4zmq1S7fKqnM0l1tVBNFD4ZMCZADXnIqDCrEmK/DYUxd716mwsbiIcky4ctAPu204g79KbIpLiJhMTyQTTEIrqsKMs1S0WkJPYesvyItOchyhrfZ11VX414sYAwLiIqD7+OEypYT0t1oTifLHBhE975G+P4dgTioMCbehJ4YOIosisKIF55Fw+oeiix8U3itT24x2IqPaaKkt1g73X61lhVbMydwc8p/D0/QgiYlst7pTp5Jxf9WRH7SXUgyVoY4mQdMvbnMFZYCTgIoSHnT1j2qOsR7NYCnOkZS4vMM1FiGiqM1i5xxaO6QA7O6F3eiDiaBTWPOyaEPEowO0Ijrhgo1805uEQcfueGrxkJ75c6u4rUgL/0DjSagDbuAh5EWpMeziRrIQiDKH4a3ktZYmXa1VcZJqKERHVnMolvr9j77WuvkcFYj+K7IQZ4nWtaQuIiA9KRKsVDi4/wG0owqdfkQbnBCpCoIZa+d2IVVM/wFCmE/GMhZvjCiuiKQZQ8AIJNHokxQYVHyjldzUmXm7a8jKwpdEvVu7ujBCJgk9r1TOBiL9dmWLbVp76vBa+nPuCnANXVJtKgdFDVXx7+oANqLd6Rsi++NXTfAAylKWJiJD0cMqfk/JQExCxiIiKvhUhCMVdCsQKjDjHqiip4LypfLnpykvAlulOfyO8V4icdQroDPqCCyL2rnAm3CisPwf8n5gbVXwnXxpUzM6cphbnCVo2O/ExmCTXr4L5Yf7FKQlQAnAGdiwPNSFQARD/R4LAgOMhUiMwal1eBLbQxEsu5+IRB68xiJnTI4GIfhUz7hTF676u9X1sT/TgTvo+Kdor+sUsT6KEt0cQcV3N9zBabPSMQHH8xF7fmApW19C356kuiu5GDChuvkXkBSYDkgFlgCAC2fZhHYk+FQJueyi6QlcF77TrhAbfBrfsoNiwX5hkhF9r0guBiD+fWEU9it2GMMiqgLtm4wxE3/csihMGpT44BvV7pAV14IquazKi5YiI7bWG7E7oTrT49A+HeFzK7JsgwYxBxSOk4BvltqRsRaQXhAIcFScJECeQYtUvx21pfXr789i37wJ7vf7EoQcCEd/ShWJFEMZZHpH0fg8i4nnSD4IR5IGNiaL0uA7N/Sxs9EObB4Cf7Yh3+rsaIILpsVZcHrGapsYtpDO6m1ztWZNvmYjIe2QS0Oo5Wi2HYJEXg2ICKXf8+3J64rZyEgXsKGjWd5PThUbm4grTVIpA6mwpstXXBItVvIVTeiIQcdboxETAj73u61qf2hQsMCYSPP4P9PRT5TfRmN9KYH6uNtRsD/cofM/+s92OEIYC89vYO4R/axQqGbOE+pLJ1izDv5Yb+1uDSo/bYCinETiYF0OcYgKJATMhpTRnHwANiUahyVObpnJsRiPR1EeQCo9Nwmf97NyE9SEi2hL5KJYBYbAFMw/NpC0uo0MCQ4QdWI+dCrR7MJerEb3+jfZCF35wZoI5h/GEVoGIuD5/1ihErJClvuGjG+8xSo9bNPzFoaGfawWKJtiK2+DG7g3KC6Q5+Ykxnf64LVRrKpMkf8s+1rI1i2ZFRAxHVKU4X8OtHGp1+tgiOP6YwDcd6dUMETtt5osVfWHBgloRnVPY5CeE2f7pGE4rYMnEYARoe28UfqzZhtJX94y3FCPKVF2T8PbKJEu23PUl0fwwO7MoRmhRpNvn3olLoz1WvvakkPE4X5HFnIigy2a0JVSCKcr/Ue8XD04juCJExEVOBUy90Y5ohFcrf3YUNyvu+8Re+1dZjtrKS6hWU58iA9GfAryJD/MdmQVPlB73BzyJ6OcuIVd7Qor8NWCekd5LRb38E8jp9Q0n0CYHhSvFtg21lkx1YsolKryGOkR0qKwN61JkLM/Thea5fPgccM3GOUyY850ASKqiDwXc4DOyuiin4olqU7XtElHi+0eKSZYcacqHHGKNQcI5PSkQEd9lCIJ12QxqNuafFbEuLxGB7wEe5FauD9HxdkP2v8w41LKzEGNSxCBeHm7wHk0aPFZLmb8w1rfOgh//Ly7DXmGTYW/TKwVoyE1VJHaSwsirC68GuTw1Ec0iWPqh3YNuRji8fyeGoSErpRie4sAQZM47Xp29nxDE6/QvduC+/POJVNSlmN3gyyxPi7OIYO4F4vmTNoteYpTsvcvDP4bf9jbAbD7D0JZlQpQiAikQBGzBOVwoVghh/PWmjuk30KO/PpuFti5oCxqBblzC2yPwQ64TGHA2DM0xQRSg8K5AmOjEhIDSZTO+rNVp0KOARpwKVLDbTaMbALN+Vwu+IJjlOPURyDB0ZPZmFD/5GvgaeSlYl22G4IShdcO6CLRajdzBrfm0XmmjG/3qPwFL09S+EJfjsAZ9eZoWFLsCMYNZir0pqOJzBeHKw0d/fXWCf4D5sn1hgcqsJndUyQ+2wdektwPWCWyV+/HUaqPtVVbh0u47DgkR8ZiIgU+8uA7N6CU/TmShl9z9x1GL57mDbvsdaEd0B/auF3B37U+TqA3I6DmbI9/ICc+/pT1A/AKPPVFjDxS/Gm6PIH5rIgIAUFNBSU4AAAA4QklNA+0AAAAAABAASAAAAAEAAgBIAAAAAQACOEJJTQQoAAAAAAAMAAAAAj/wAAAAAAAAOEJJTQRDAAAAAAANUGJlVwEQAAUBAAAAAAA=" alt="Storage WISE" width="265" height="80">
+    <div class="nav-actions">
+      <a class="tel-link" href="tel:+27120300204">📞 012 030 0204</a>
+      <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero steel-texture">
+    <div class="container hero-grid">
+      <div>
+        <h1>Whatever the job needs, we build it into a container.</h1>
+        <p class="hero-sub">Site offices, ablution blocks, guard houses, workshops and shops — converted from new or refurbished shipping containers, wired, sealed and delivered anywhere in South Africa.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
+          <a class="btn btn-outline" href="tel:+27120300204">Call 012 030 0204</a>
+        </div>
+        <div class="trust-strip">
+          <div class="trust-item"><strong>11+ years</strong>converting containers</div>
+          <div class="trust-item"><strong>BEE certified</strong>for corporate procurement</div>
+          <div class="trust-item"><strong>C.O.C. supplied</strong>on all electrical work</div>
+          <div class="trust-item"><strong>Nationwide</strong>delivery & site placement</div>
+        </div>
+      </div>
+
+      <div class="hero-art hero-fade" aria-hidden="true">
+        <svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technical illustration of a converted shipping container with a door, three windows and a dimension line showing 6.058 metres">
+          <!-- dimension line -->
+          <line class="dim-line" x1="60" y1="70" x2="540" y2="70"/>
+          <line class="dim-tick" x1="60" y1="60" x2="60" y2="80"/>
+          <line class="dim-tick" x1="540" y1="60" x2="540" y2="80"/>
+          <text x="300" y="52" text-anchor="middle" fill="#8FC1E0" font-family="IBM Plex Mono" font-size="16">6.058 m</text>
+
+          <!-- container body -->
+          <rect class="container-body" x="60" y="90" width="480" height="230" />
+          <!-- corrugation lines -->
+          <g class="container-corr">
+            <line x1="90" y1="90" x2="90" y2="320"/>
+            <line x1="120" y1="90" x2="120" y2="320"/>
+            <line x1="150" y1="90" x2="150" y2="320"/>
+            <line x1="180" y1="90" x2="180" y2="320"/>
+            <line x1="330" y1="90" x2="330" y2="320"/>
+            <line x1="360" y1="90" x2="360" y2="320"/>
+            <line x1="390" y1="90" x2="390" y2="320"/>
+            <line x1="420" y1="90" x2="420" y2="320"/>
+            <line x1="450" y1="90" x2="450" y2="320"/>
+            <line x1="480" y1="90" x2="480" y2="320"/>
+            <line x1="510" y1="90" x2="510" y2="320"/>
+          </g>
+
+          <!-- door -->
+          <rect class="container-door" x="210" y="150" width="90" height="170"/>
+          <circle cx="290" cy="238" r="4" fill="#8FC1E0"/>
+
+          <!-- windows -->
+          <g>
+            <rect class="container-window" x="390" y="150" width="60" height="55"/>
+            <line class="container-bar" x1="405" y1="150" x2="405" y2="205"/>
+            <line class="container-bar" x1="420" y1="150" x2="420" y2="205"/>
+            <line class="container-bar" x1="435" y1="150" x2="435" y2="205"/>
+          </g>
+          <g>
+            <rect class="container-window" x="90" y="150" width="60" height="55"/>
+            <line class="container-bar" x1="105" y1="150" x2="105" y2="205"/>
+            <line class="container-bar" x1="120" y1="150" x2="120" y2="205"/>
+            <line class="container-bar" x1="135" y1="150" x2="135" y2="205"/>
+          </g>
+
+          <!-- base skids -->
+          <rect x="70" y="320" width="460" height="14" fill="#22323F"/>
+
+          <!-- C.O.C badge -->
+          <circle class="badge-coc" cx="500" cy="270" r="26"/>
+          <text x="500" y="266" text-anchor="middle" fill="#10202B" font-family="IBM Plex Mono" font-size="11" font-weight="600">C.O.C.</text>
+          <text x="500" y="279" text-anchor="middle" fill="#10202B" font-family="IBM Plex Mono" font-size="8">ELECTRICAL</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE CONVERT ============ -->
+  <section id="conversions">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow-note">What we build</span>
+        <h2>One container. Any purpose.</h2>
+        <p>Every conversion starts as a standard 3m, 6m, 12m or 12m High Cube container and comes out fitted for exactly what your site needs.</p>
+      </div>
+    </div>
+    <div class="container">
+    <div class="type-grid">
+      <div class="type-card">
+        <svg class="type-icon" viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="22" fill="none" stroke="#FFD000" stroke-width="2.5"/><rect x="14" y="18" width="6" height="14" fill="#FFD000"/><rect x="24" y="18" width="6" height="6" fill="none" stroke="#FFD000" stroke-width="2"/></svg>
+        <h3>Site Offices</h3>
+        <p>A dry, lockable office for the site manager — ready before the first slab is poured. Wired, insulated and windowed on request.</p>
+      </div>
+      <div class="type-card">
+        <svg class="type-icon" viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="22" fill="none" stroke="#FFD000" stroke-width="2.5"/><circle cx="15" cy="26" r="3" fill="#FFD000"/><circle cx="25" cy="26" r="3" fill="#FFD000"/><line x1="10" y1="18" x2="30" y2="18" stroke="#FFD000" stroke-width="2"/></svg>
+        <h3>Ablution Blocks</h3>
+        <p>Toilets, basins and showers built into a container shell, plumbed and sealed for a busy construction or event site.</p>
+      </div>
+      <div class="type-card">
+        <svg class="type-icon" viewBox="0 0 40 40"><rect x="10" y="8" width="20" height="26" fill="none" stroke="#FFD000" stroke-width="2.5"/><rect x="16" y="16" width="8" height="8" fill="none" stroke="#FFD000" stroke-width="2"/></svg>
+        <h3>Guard Houses</h3>
+        <p>A secure, weatherproof post at your gate with windows positioned for a full view of the entrance and access road.</p>
+      </div>
+      <div class="type-card">
+        <svg class="type-icon" viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="22" fill="none" stroke="#FFD000" stroke-width="2.5"/><rect x="12" y="24" width="6" height="8" fill="#FFD000"/><rect x="22" y="16" width="6" height="6" fill="none" stroke="#FFD000" stroke-width="2"/></svg>
+        <h3>Accommodation Units</h3>
+        <p>Insulated, wired living space for site or farm staff — from a single room to a full multi-container unit.</p>
+      </div>
+      <div class="type-card">
+        <svg class="type-icon" viewBox="0 0 40 40"><rect x="4" y="12" width="16" height="18" fill="none" stroke="#FFD000" stroke-width="2.5"/><rect x="20" y="12" width="16" height="18" fill="none" stroke="#FFD000" stroke-width="2.5"/><line x1="20" y1="21" x2="20" y2="21" stroke="#FFD000"/></svg>
+        <h3>Workshops & Store Rooms</h3>
+        <p>Reinforced shelving, benches and walkways between linked containers, built around the tools and stock you run.</p>
+      </div>
+      <div class="type-card">
+        <svg class="type-icon" viewBox="0 0 40 40"><rect x="6" y="14" width="28" height="18" fill="none" stroke="#FFD000" stroke-width="2.5"/><rect x="10" y="8" width="20" height="8" fill="none" stroke="#FFD000" stroke-width="2"/></svg>
+        <h3>Shops & Kiosks</h3>
+        <p>Spaza shops and kiosk conversions with a serving hatch, roller shutter and space for signage and branding.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S INCLUDED ============ -->
+  <section class="on-panel">
+    <div class="container spec-wrap">
+      <div>
+        <span class="eyebrow-note">What's included</span>
+        <h2>Built to spec, not just painted.</h2>
+        <p>Every StorageWISE conversion is treated as a structural and electrical job, not a cosmetic one — so it holds up on-site for years, not months.</p>
+        <a class="btn btn-outline-dark" href="#quote">Get a quote for your spec</a>
+      </div>
+      <ul class="spec-list">
+        <li><span class="spec-num">01</span> Rust removal, priming and enamel top-coat, inside and out</li>
+        <li><span class="spec-num">02</span> Steel security doors or roller shutters</li>
+        <li><span class="spec-num">03</span> Aluminium windows fitted with burglar bars</li>
+        <li><span class="spec-num">04</span> Full electrical install — DB board, plug points, LED lighting, C.O.C. supplied</li>
+        <li><span class="spec-num">05</span> Waterproofed or polyurethane rubberised flooring</li>
+        <li><span class="spec-num">06</span> Custom cut-outs, walkways and multi-container layouts</li>
+        <li><span class="spec-num">07</span> Signage, branding and interior finishes on request</li>
+        <li><span class="spec-num">08</span> Transport and on-site crane placement</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="steel-texture">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow-note">How it works</span>
+        <h2>From brief to delivered, in four steps.</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="process-strip">
+        <div class="process-step">
+          <span class="process-num">STEP 1</span>
+          <h3>Tell us the brief</h3>
+          <p>Size, budget, site location and what the space needs to do.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-num">STEP 2</span>
+          <h3>We draw the layout</h3>
+          <p>A floor plan and firm quote before anything gets cut.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-num">STEP 3</span>
+          <h3>We build and certify</h3>
+          <p>Conversion, electrical work and C.O.C., quality-checked.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-num">STEP 4</span>
+          <h3>We deliver and place</h3>
+          <p>Trucked in and craned into position on your site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECENT WORK ============ -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow-note">Recent conversions</span>
+        <h2>A few jobs from the yard.</h2>
+        <p>A small sample of recent conversions. Replace the illustrations below with real project photos when you host this page.</p>
+      </div>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-thumb">
+            <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="225" fill="#16283A"/><rect x="40" y="60" width="220" height="110" fill="#4E6B80"/><rect x="130" y="100" width="40" height="70" fill="#16283A"/><rect x="190" y="90" width="35" height="30" fill="#7A94A6"/></svg>
+          </div>
+          <div class="work-body">
+            <span class="work-tag">12m High Cube — North West</span>
+            <h3>Office & reception for a busy work yard</h3>
+            <p>Converted into a bright manager's office and reception, with security windows and a full electrical fit-out.</p>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-thumb">
+            <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="225" fill="#16283A"/><rect x="60" y="70" width="180" height="100" fill="#4E6B80"/><rect x="120" y="105" width="35" height="65" fill="#16283A"/><rect x="175" y="95" width="30" height="25" fill="#7A94A6"/></svg>
+          </div>
+          <div class="work-body">
+            <span class="work-tag">6m Container — Pretoria</span>
+            <h3>Church site office & living space</h3>
+            <p>Refurbished from a D-grade container into a combined office and accommodation unit for a construction site.</p>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-thumb">
+            <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="225" fill="#16283A"/><rect x="30" y="80" width="110" height="90" fill="#4E6B80"/><rect x="160" y="80" width="110" height="90" fill="#4E6B80"/><rect x="140" y="115" width="20" height="20" fill="#16283A"/></svg>
+          </div>
+          <div class="work-body">
+            <span class="work-tag">Two 6m containers — Mining site</span>
+            <h3>Linked workshop with rubberised flooring</h3>
+            <p>Two containers joined with a cut-through walkway to form a single mine-site workshop, built to site safety requirements.</p>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-thumb">
+            <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="225" fill="#16283A"/><rect x="55" y="90" width="190" height="80" fill="#4E6B80"/><rect x="100" y="90" width="60" height="35" fill="#16283A"/></svg>
+          </div>
+          <div class="work-body">
+            <span class="work-tag">3m Container — Retail</span>
+            <h3>Spaza shop with serving hatch</h3>
+            <p>Fitted with a hatch, roller shutter and branded exterior for a small retail site.</p>
+          </div>
+        </div>
+      </div>
+      <p class="work-note">Illustrations shown are schematic placeholders, not project photography.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="on-panel">
+    <div class="container" style="max-width:820px;">
+      <div class="section-head">
+        <span class="eyebrow-note">Before you ask</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How long does a conversion take?</summary>
+          <div class="faq-a">It depends on the size and finish. Most single-container conversions are quoted within days and built within a few weeks — we'll confirm a firm date when we quote your job.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you use new or used containers?</summary>
+          <div class="faq-a">Both. Tell us your budget and intended use and we'll recommend new, one-trip, or refurbished (Grade B/C) stock.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you deliver outside Pretoria and Centurion?</summary>
+          <div class="faq-a">Yes — we deliver and place containers nationwide, including remote mining and construction sites.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the electrical work certified?</summary>
+          <div class="faq-a">Yes. Every electrical installation is supplied with a Certificate of Compliance (C.O.C.).</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you meet our company's procurement requirements?</summary>
+          <div class="faq-a">We're BEE certified and can supply the relevant certificates and documentation for your procurement process.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEAD FORM ============ -->
+  <section class="quote-section" id="quote">
+    <div class="container quote-wrap">
+      <div class="quote-copy">
+        <span class="eyebrow-note">Get a free quote</span>
+        <h2>Tell us the brief. We'll quote the container.</h2>
+        <p>Send through your project details and we'll come back with a layout and a firm price — no obligation.</p>
+        <ul class="quote-perks">
+          <li>Free quote, usually within 1–2 working days</li>
+          <li>Delivery and crane placement anywhere in South Africa</li>
+          <li>BEE certificate and C.O.C. supplied for procurement</li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <form id="quoteForm" novalidate>
+          <div class="form-row two">
+            <div>
+              <label for="fullName">Full name *</label>
+              <input type="text" id="fullName" name="fullName" required autocomplete="name">
+              <div class="field-error">Please enter your name.</div>
+            </div>
+            <div>
+              <label for="company">Company name</label>
+              <input type="text" id="company" name="company" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="phone">Phone number *</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="082 000 0000">
+              <div class="field-error">Please enter a phone number.</div>
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+              <div class="field-error">Please enter a valid email address.</div>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="conversionType">Conversion type</label>
+              <select id="conversionType" name="conversionType">
+                <option value="">Select an option</option>
+                <option>Site Office</option>
+                <option>Ablution Block</option>
+                <option>Guard House</option>
+                <option>Accommodation Unit</option>
+                <option>Workshop / Store Room</option>
+                <option>Shop / Kiosk</option>
+                <option>Other / Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="containerSize">Container size</label>
+              <select id="containerSize" name="containerSize">
+                <option value="">Select an option</option>
+                <option>3m</option>
+                <option>6m</option>
+                <option>12m</option>
+                <option>12m High Cube</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="location">Project location</label>
+              <input type="text" id="location" name="location" placeholder="e.g. Centurion, or mine site & province">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="message">Tell us about the project</label>
+              <textarea id="message" name="message" placeholder="What is it for, and when do you need it on-site?"></textarea>
+            </div>
+          </div>
+
+          <p class="form-consent">By submitting this form you agree to be contacted by Storage WISE about your quote request.</p>
+          <button type="submit" class="btn btn-primary btn-block">Send My Quote Request</button>
+        </form>
+
+        <div id="successPanel">
+          <div class="ok-mark">✓</div>
+          <h3>Thanks — your request is in.</h3>
+          <p>A member of the Storage WISE team will be in touch shortly with your quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot-grid">
+    <div>
+      <h4>STORAGE WISE</h4>
+      <p>Container conversions, sales, rentals and self storage. Based off the R21 near Irene, serving Pretoria, Centurion and sites nationwide.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="foot-links">
+        <li><a href="tel:+27120300204">012 030 0204</a></li>
+        <li><a href="mailto:office@storagewise.co.za">office@storagewise.co.za</a></li>
+        <li>M57, off R21, Pretoria, 0157</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul class="foot-links">
+        <li>Container Conversions</li>
+        <li>Container Sales</li>
+        <li>Container Rentals</li>
+        <li>Self Storage</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    This is a campaign landing page draft. Swap in your logo, real project photography and current legal/privacy copy before publishing.
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+27120300204">📞 Call Now</a>
+  <a class="quote" href="#quote">Get a Free Quote</a>
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('quoteForm');
+  var successPanel = document.getElementById('successPanel');
+
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  function clearInvalid(el){ el.classList.remove('invalid'); }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var valid = true;
+    var name = document.getElementById('fullName');
+    var phone = document.getElementById('phone');
+    var email = document.getElementById('email');
+
+    [name, phone, email].forEach(clearInvalid);
+
+    if(!name.value.trim()){ name.classList.add('invalid'); valid = false; }
+    if(!phone.value.trim()){ phone.classList.add('invalid'); valid = false; }
+    if(!email.value.trim() || !validEmail(email.value.trim())){ email.classList.add('invalid'); valid = false; }
+
+    if(!valid){
+      var firstInvalid = form.querySelector('.invalid');
+      if(firstInvalid){ firstInvalid.focus(); }
+      return;
+    }
+
+    var payload = {
+      fullName: name.value.trim(),
+      company: document.getElementById('company').value.trim(),
+      phone: phone.value.trim(),
+      email: email.value.trim(),
+      conversionType: document.getElementById('conversionType').value,
+      containerSize: document.getElementById('containerSize').value,
+      location: document.getElementById('location').value.trim(),
+      message: document.getElementById('message').value.trim()
+    };
+
+    // ---------------------------------------------------------------
+    // TODO (developer): replace this block with a real submission —
+    // e.g. fetch('/api/lead', {method:'POST', body: JSON.stringify(payload)})
+    // or a form backend such as Getform, Formspree, or a CRM webhook.
+    // ---------------------------------------------------------------
+    console.log('Quote request submitted:', payload);
+
+    fireConversion(payload);
+
+    form.style.display = 'none';
+    successPanel.style.display = 'block';
+    successPanel.setAttribute('tabindex', '-1');
+    successPanel.focus();
+  });
+
+  function fireConversion(payload){
+    // Google Ads / GA4 conversion + dataLayer event.
+    // Uncomment the gtag calls once the Google Ads tag near the top
+    // of this file is wired up with your real conversion IDs.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'generate_lead', form: 'container_conversions_quote', lead: payload.conversionType || 'unspecified' });
+
+    // if (typeof gtag === 'function') {
+    //   gtag('event', 'conversion', { send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL' });
+    // }
+  }
+})();
+</script>
+
+</body>
+</html>
