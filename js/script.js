@@ -2,7 +2,6 @@
   var FORM_ENDPOINT = 'https://formsubmit.co/ajax/jakkies@gmail.com';
 
   var form = document.getElementById('quoteForm');
-  var successPanel = document.getElementById('successPanel');
   var formNotice = document.getElementById('formNotice');
   var submitBtn = document.getElementById('quoteSubmitBtn');
 
@@ -69,10 +68,7 @@
       })
       .then(function(){
         fireConversion(payload);
-        form.style.display = 'none';
-        successPanel.style.display = 'block';
-        successPanel.setAttribute('tabindex', '-1');
-        successPanel.focus();
+        window.location.href = '/thank-you';
       })
       .catch(function(err){
         console.error('Quote request failed to send:', err);
