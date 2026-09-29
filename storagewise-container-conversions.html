@@ -347,15 +347,8 @@
 
             <div class="form-row">
               <div>
-                <label for="location-hero">Project location</label>
+                <label for="location-hero">Delivery Area</label>
                 <input type="text" id="location-hero" name="location" placeholder="e.g. Centurion, or mine site & province">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div>
-                <label for="message-hero">Tell us about the project</label>
-                <textarea id="message-hero" name="message" placeholder="What is it for, and when do you need it on-site?"></textarea>
               </div>
             </div>
 
@@ -630,15 +623,8 @@
 
           <div class="form-row">
             <div>
-              <label for="location">Project location</label>
+              <label for="location">Delivery Area</label>
               <input type="text" id="location" name="location" placeholder="e.g. Centurion, or mine site & province">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div>
-              <label for="message">Tell us about the project</label>
-              <textarea id="message" name="message" placeholder="What is it for, and when do you need it on-site?"></textarea>
             </div>
           </div>
 
@@ -729,8 +715,7 @@
         email: email.value.trim(),
         conversionType: field(form, 'conversionType').value,
         containerSize: field(form, 'containerSize').value,
-        location: field(form, 'location').value.trim(),
-        message: field(form, 'message').value.trim()
+        location: field(form, 'location').value.trim()
       };
 
       // ---------------------------------------------------------------

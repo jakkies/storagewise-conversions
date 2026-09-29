@@ -1,5 +1,5 @@
 (function(){
-  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/jakkies@gmail.com';
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/ops@storagewise.co.za';
 
   var forms = document.querySelectorAll('.quote-form');
 
@@ -54,8 +54,7 @@
         email: email.value.trim(),
         conversionType: field(form, 'conversionType').value,
         containerSize: field(form, 'containerSize').value,
-        location: field(form, 'location').value.trim(),
-        message: field(form, 'message').value.trim()
+        location: field(form, 'location').value.trim()
       };
 
       if(submitBtn){
