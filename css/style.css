@@ -146,6 +146,10 @@ section{padding:64px 0;}
 .work-tag{font-family:var(--font-mono); font-size:12px; color:var(--accent); display:block; margin-bottom:8px;}
 .work-body h3{font-size:16.5px; margin-bottom:6px;}
 .work-body p{font-size:14px; margin-bottom:0;}
+.work-body p + p{margin-top:10px;}
+.work-body ul{margin:8px 0 10px; padding-left:18px; font-size:14px;}
+.work-body ul li{margin-bottom:4px; opacity:0.92;}
+.work-price{color:var(--brand); font-weight:700; font-size:14px !important;}
 .work-note{font-size:13px; opacity:0.65; margin-top:22px;}
 
 /* ---------- quote / lead form ---------- */
