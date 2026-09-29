@@ -148,19 +148,6 @@ section{padding:64px 0;}
 .work-body p{font-size:14px; margin-bottom:0;}
 .work-note{font-size:13px; opacity:0.65; margin-top:22px;}
 
-/* ---------- faq ---------- */
-.faq-item{border-bottom:1px solid #d8d0b4; padding:6px 0;}
-.faq-item summary{
-  cursor:pointer; list-style:none; font-weight:700; font-size:16.5px;
-  padding:16px 34px 16px 0; position:relative;
-}
-.faq-item summary::-webkit-details-marker{display:none;}
-.faq-item summary::after{
-  content:"+"; position:absolute; right:4px; top:14px; font-size:22px; color:var(--brand-dark); font-weight:400;
-}
-.faq-item[open] summary::after{content:"–";}
-.faq-item .faq-a{padding:0 0 20px; font-size:15px; max-width:70ch;}
-
 /* ---------- quote / lead form ---------- */
 .quote-section{background:var(--panel); color:var(--ink);}
 .quote-wrap{display:grid; grid-template-columns:1fr; gap:40px;}
