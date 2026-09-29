@@ -206,3 +206,15 @@ footer{padding:48px 0 100px; border-top:1px solid var(--line-dark);}
 @media(min-width:760px){ .mobile-bar{display:none;} }
 body{padding-bottom:56px;}
 @media(min-width:760px){ body{padding-bottom:0;} }
+
+/* ---------- whatsapp float ---------- */
+.whatsapp-float{
+  position:fixed; right:20px; bottom:20px; z-index:70;
+  width:56px; height:56px; border-radius:50%;
+  background:#25D366; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,0.3);
+  transition:transform .15s ease;
+}
+.whatsapp-float:hover{ transform:scale(1.06); }
+.whatsapp-float svg{width:28px; height:28px;}
+@media(max-width:759px){ .whatsapp-float{ right:16px; bottom:76px; width:50px; height:50px;} .whatsapp-float svg{width:25px; height:25px;} }
