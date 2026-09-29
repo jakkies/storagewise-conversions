@@ -1,83 +1,95 @@
 (function(){
   var FORM_ENDPOINT = 'https://formsubmit.co/ajax/jakkies@gmail.com';
 
-  var form = document.getElementById('quoteForm');
-  var formNotice = document.getElementById('formNotice');
-  var submitBtn = document.getElementById('quoteSubmitBtn');
+  var forms = document.querySelectorAll('.quote-form');
 
   function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
 
   function clearInvalid(el){ el.classList.remove('invalid'); }
 
-  function showNotice(message){
-    formNotice.textContent = message;
-    formNotice.style.display = 'block';
-  }
+  function field(form, name){ return form.querySelector('[name="' + name + '"]'); }
 
-  function hideNotice(){
-    formNotice.style.display = 'none';
-  }
+  forms.forEach(function(form){
+    var formCard = form.closest('.form-card');
+    var formNotice = formCard ? formCard.querySelector('.form-notice') : null;
+    var submitBtn = form.querySelector('button[type="submit"]');
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    hideNotice();
-
-    var valid = true;
-    var name = document.getElementById('fullName');
-    var phone = document.getElementById('phone');
-    var email = document.getElementById('email');
-
-    [name, phone, email].forEach(clearInvalid);
-
-    if(!name.value.trim()){ name.classList.add('invalid'); valid = false; }
-    if(!phone.value.trim()){ phone.classList.add('invalid'); valid = false; }
-    if(!email.value.trim() || !validEmail(email.value.trim())){ email.classList.add('invalid'); valid = false; }
-
-    if(!valid){
-      var firstInvalid = form.querySelector('.invalid');
-      if(firstInvalid){ firstInvalid.focus(); }
-      return;
+    function showNotice(message){
+      if(!formNotice){ return; }
+      formNotice.textContent = message;
+      formNotice.style.display = 'block';
     }
 
-    var payload = {
-      _subject: 'New container conversion quote request',
-      fullName: name.value.trim(),
-      company: document.getElementById('company').value.trim(),
-      phone: phone.value.trim(),
-      email: email.value.trim(),
-      conversionType: document.getElementById('conversionType').value,
-      containerSize: document.getElementById('containerSize').value,
-      location: document.getElementById('location').value.trim(),
-      message: document.getElementById('message').value.trim()
-    };
+    function hideNotice(){
+      if(!formNotice){ return; }
+      formNotice.style.display = 'none';
+    }
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      hideNotice();
 
-    fetch(FORM_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    })
-      .then(function(response){
-        if(!response.ok){ throw new Error('Request failed with status ' + response.status); }
-        return response.json();
+      var valid = true;
+      var name = field(form, 'fullName');
+      var phone = field(form, 'phone');
+      var email = field(form, 'email');
+
+      [name, phone, email].forEach(clearInvalid);
+
+      if(!name.value.trim()){ name.classList.add('invalid'); valid = false; }
+      if(!phone.value.trim()){ phone.classList.add('invalid'); valid = false; }
+      if(!email.value.trim() || !validEmail(email.value.trim())){ email.classList.add('invalid'); valid = false; }
+
+      if(!valid){
+        var firstInvalid = form.querySelector('.invalid');
+        if(firstInvalid){ firstInvalid.focus(); }
+        return;
+      }
+
+      var payload = {
+        _subject: 'New container conversion quote request',
+        fullName: name.value.trim(),
+        company: field(form, 'company').value.trim(),
+        phone: phone.value.trim(),
+        email: email.value.trim(),
+        conversionType: field(form, 'conversionType').value,
+        containerSize: field(form, 'containerSize').value,
+        location: field(form, 'location').value.trim(),
+        message: field(form, 'message').value.trim()
+      };
+
+      if(submitBtn){
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
       })
-      .then(function(){
-        fireConversion(payload);
-        window.location.href = '/thank-you';
-      })
-      .catch(function(err){
-        console.error('Quote request failed to send:', err);
-        showNotice('Something went wrong sending your request. Please try again, or call us on 012 030 0204.');
-      })
-      .finally(function(){
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send My Quote Request';
-      });
+        .then(function(response){
+          if(!response.ok){ throw new Error('Request failed with status ' + response.status); }
+          return response.json();
+        })
+        .then(function(){
+          fireConversion(payload);
+          window.location.href = '/thank-you';
+        })
+        .catch(function(err){
+          console.error('Quote request failed to send:', err);
+          showNotice('Something went wrong sending your request. Please try again, or call us on 012 030 0204.');
+        })
+        .finally(function(){
+          if(submitBtn){
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send My Quote Request';
+          }
+        });
+    });
   });
 
   function fireConversion(payload){
