@@ -183,6 +183,10 @@
   .quote-wrap{display:grid; grid-template-columns:1fr; gap:40px;}
   @media(min-width:900px){ .quote-wrap{grid-template-columns:0.9fr 1.1fr;} }
   .quote-copy h2{font-size:clamp(26px,3.4vw,36px); color:var(--ink);}
+  .quote-section .eyebrow-note{color:var(--brand-dark);}
+  .quote-copy p{font-size:16px; color:var(--ink);}
+  .quote-perks{margin:16px 0 0; padding-left:20px; font-size:15px; color:var(--ink);}
+  .quote-perks li{padding:4px 0; color:var(--ink);}
 
   .form-card{background:var(--cream); border:1px solid #d8d0b4; padding:28px;}
   .form-row{display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:16px;}
@@ -493,7 +497,13 @@
   <section class="quote-section" id="quote">
     <div class="container quote-wrap">
       <div class="quote-copy">
+        <span class="eyebrow-note">QUOTE REQUEST</span>
         <h2>Share your requirements.</h2>
+        <p>What you can expect when submitting the form:</p>
+        <ul class="quote-perks">
+          <li>Obligation Free Quote within 24 hours</li>
+          <li>Your details will be kept confidential and will not be shared with any other parties</li>
+        </ul>
       </div>
 
       <div class="form-card">

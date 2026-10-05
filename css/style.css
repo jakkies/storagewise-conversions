@@ -156,6 +156,10 @@ section{padding:64px 0;}
 .quote-wrap{display:grid; grid-template-columns:1fr; gap:40px;}
 @media(min-width:900px){ .quote-wrap{grid-template-columns:0.9fr 1.1fr;} }
 .quote-copy h2{font-size:clamp(26px,3.4vw,36px); color:var(--ink);}
+.quote-section .eyebrow-note{color:var(--brand-dark);}
+.quote-copy p{font-size:16px; color:var(--ink);}
+.quote-perks{margin:16px 0 0; padding-left:20px; font-size:15px; color:var(--ink);}
+.quote-perks li{padding:4px 0; color:var(--ink);}
 
 .form-card{background:var(--cream); border:1px solid #d8d0b4; padding:28px;}
 .form-row{display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:16px;}
