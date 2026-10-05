@@ -76,7 +76,7 @@
         })
         .then(function(){
           fireConversion(payload);
-          window.location.href = '/thank-you';
+          window.location.href = 'thank-you.html';
         })
         .catch(function(err){
           console.error('Quote request failed to send:', err);
