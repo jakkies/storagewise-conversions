@@ -80,7 +80,7 @@
         })
         .catch(function(err){
           console.error('Quote request failed to send:', err);
-          showNotice('Something went wrong sending your request. Please try again, or call us on 012 030 0204.');
+          showNotice('Something went wrong sending your request. Please try again, or call us on 064 233 2096.');
         })
         .finally(function(){
           if(submitBtn){
